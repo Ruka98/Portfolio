@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WA+ GUI Tool</title>
+  <link rel="stylesheet" href="../../style.css" />
+</head>
+<body>
+  <header>
+    <h1>WA+ GUI Tool</h1>
+    <p><a href="../../index.html" style="color:#caf0f8;">← Back to Home</a></p>
+  </header>
+
+  <section>
+    <h2>Overview</h2>
+    <p>The WA+ GUI Tool provides a user-friendly interface for running WA+ (Water Accounting Plus) analyses without requiring technical knowledge of Python or Jupyter Notebooks. It simplifies the process of generating WA+ Sheets 1 & 2 through an intuitive graphical interface.</p>
+    
+    <h2>Evolution of the Tool</h2>
+    <div class="evolution-stages">
+      <div class="stage">
+        <h3>Initial Version (Jupyter Notebooks)</h3>
+        <ul>
+          <li>Required manual folder directory changes</li>
+          <li>Complex Conda environment setup</li>
+          <li>GDAL and Cairo installation issues</li>
+          <li>Technical knowledge needed</li>
+        </ul>
+      </div>
+      <div class="stage">
+        <h3>Tkinter Version</h3>
+        <ul>
+          <li>Basic GUI replacing notebooks</li>
+          <li>Automated file selection and processing</li>
+          <li>Single-file distribution with PyInstaller</li>
+          <li>Reduced setup time</li>
+        </ul>
+      </div>
+      <div class="stage">
+        <h3>Current PyQt Version</h3>
+        <ul>
+          <li>Modern, responsive UI</li>
+          <li>Tabbed interface with previews</li>
+          <li>Native installers for all platforms</li>
+          <li>Separation of app logic and packaging</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>Features</h2>
+    <ul>
+      <li>Intuitive graphical interface for WA+ analysis</li>
+      <li>Automated generation of WA+ Sheets 1 & 2</li>
+      <li>File selection dialogs and path management</li>
+      <li>Table previews before processing</li>
+      <li>Progress indicators and completion notifications</li>
+      <li>Multiple workflow options (NetCDF creation, SM Balance, Hydroloop)</li>
+    </ul>
+
+    <h2>Interface Walkthrough</h2>
+    <div class="interface-gallery">
+      <div class="interface-step">
+        <h3>Step 1: Main Menu</h3>
+        <img src="assets/images/interface/1-main-menu.png" alt="Main Menu Interface">
+        <p>The starting point of the application where you can select different workflows.</p>
+      </div>
+      <div class="interface-step">
+        <h3>Step 2: Select Workflow</h3>
+        <img src="assets/images/interface/2-select-workflow.png" alt="Workflow Selection Interface">
+        <p>Choose between different processing workflows: NetCDF Creation, SM Balance, or Hydroloop.</p>
+      </div>
+      <div class="interface-step">
+        <h3>Step 3: Create NetCDF</h3>
+        <img src="assets/images/interface/3-create-netcdf.png" alt="NetCDF Creation Interface">
+        <p>Interface for creating NetCDF files with various configuration options.</p>
+      </div>
+      <div class="interface-step">
+        <h3>Step 4: SM Balance</h3>
+        <img src="assets/images/interface/4-sm-balance.png" alt="SM Balance Interface">
+        <p>Soil Moisture balance calculation interface with input parameters.</p>
+      </div>
+      <div class="interface-step">
+        <h3>Step 5: Hydroloop</h3>
+        <img src="assets/images/interface/5-hydroloop.png" alt="Hydroloop Interface">
+        <p>Hydrological loop processing interface with visualization options.</p>
+      </div>
+      <div class="interface-step">
+        <h3>Step 6: Results</h3>
+        <img src="assets/images/interface/6-results.png" alt="Results Interface">
+        <p>View and export the processed results from your selected workflow.</p>
+      </div>
+    </div>
+
+    <h2>Download Options</h2>
+    <div class="download-options">
+      <div class="download-option">
+        <h3>Tkinter Version (Windows)</h3>
+        <p>Basic GUI packaged as single EXE file</p>
+        <a href="assets/downloads/tkinter/wa_gui_tkinter.zip" class="download-button" download>Download ZIP</a>
+      </div>
+      <div class="download-option">
+        <h3>PyQt Version (Source Code)</h3>
+        <p>Modern GUI with full source code</p>
+        <a href="assets/downloads/pyqt/wa_gui_pyqt.zip" class="download-button" download>Download ZIP</a>
+      </div>
+      <div class="download-option">
+        <h3>Example Dataset</h3>
+        <p>Sample files to test the tool</p>
+        <a href="assets/downloads/examples/wa_example_files.zip" class="download-button" download>Download ZIP</a>
+      </div>
+    </div>
+
+    <h2>Technologies Used</h2>
+    <ul>
+      <li>Python</li>
+      <li>PyQt5 for modern GUI</li>
+      <li>Tkinter for basic version</li>
+      <li>PyInstaller for executable packaging</li>
+      <li>Briefcase for native installers</li>
+      <li>GDAL for geospatial processing</li>
+      <li>NetCDF for data storage</li>
+    </ul>
+
+    <h2>Documentation</h2>
+    <ul>
+      <li><a href="assets/documents/user_manual.pdf" download>User Manual (PDF)</a></li>
+      <li><a href="assets/documents/installation_guide.pdf" download>Installation Guide (PDF)</a></li>
+      <li><a href="assets/documents/workflow_guide.pdf" download>Workflow Guide (PDF)</a></li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>© 2025 Kavindu Rukmal</p>
+  </footer>
+</body>
+</html>
