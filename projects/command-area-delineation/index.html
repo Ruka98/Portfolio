@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Command Area Delineation Tool</title>
+  <link rel="stylesheet" href="../../style.css" />
+</head>
+<body>
+  <header>
+    <h1>Command Area Delineation Tool</h1>
+    <p><a href="../../index.html" style="color:#caf0f8;">← Back to Home</a></p>
+  </header>
+
+  <section>
+    <h2>Overview</h2>
+    <p>This tool allows hydrologists and researchers to delineate command areas from DEM for wastewater treatment plants (WWTPs). The command area represents the geographical extent influenced by treated water discharge, where wastewater can be distributed for reuse.</p>
+    
+    <p>The delineation considers key factors including:
+    <ul>
+      <li>Topography and hydrological flow paths</li>
+      <li>Losses due to evaporation and infiltration</li>
+      <li>Plant capacity and distribution networks</li>
+      <li>Local water demand and economic constraints</li>
+    </ul>
+    </p>
+
+    <p>The command area is defined using:
+    <ul>
+      <li><strong>Upstream:</strong> A 5 km radius around the WWTP, stopping at elevations 50 m higher than the WWTP elevation</li>
+      <li><strong>Downstream:</strong> A 500 m buffer zone around detected flow paths</li>
+      <li>The union of these areas forms the final command area</li>
+    </ul>
+    </p>
+
+    <h2>Features</h2>
+    <ul>
+      <li>Two delineation methods with different flow path stopping criteria</li>
+      <li>Interactive outlet (WWTP location) selection</li>
+      <li>Automatic buffer creation around flow paths</li>
+      <li>Elevation-based area filtering</li>
+      <li>Visualization of command areas</li>
+    </ul>
+
+    <h2>Delineation Methods</h2>
+    <h3>Option 1: Fixed Length Method</h3>
+    <ul>
+      <li>Uses D8 flow direction method to trace downstream path</li>
+      <li>Fixed flow path length of 5 km</li>
+      <li>500m buffer around flow path</li>
+      <li>Removes areas higher than WWTP elevation +50m</li>
+    </ul>
+
+    <h3>Option 2: Dynamic Discharge Method</h3>
+    <ul>
+      <li>Flow path length varies based on discharge rate</li>
+      <li>Considers infiltration and evaporation losses</li>
+      <li>Stops when flow discharge (Q) < 2 cumecs</li>
+      <li>Same buffer and elevation filtering as Option 1</li>
+    </ul>
+
+    <h2>Case Study Examples</h2>
+    <div class="case-studies">
+      <div class="case-study">
+        <h3>Quos WWTP (15,000 m³/day)</h3>
+        <p>Option 1: 5km | Option 2: 13km</p>
+        <img src="assets/images/case-studies/quos-result.png" alt="Quos WWTP Command Area">
+      </div>
+      <div class="case-study">
+        <h3>Armant WWTP (11,000 m³/day)</h3>
+        <p>Option 1: 5km | Option 2: 9km</p>
+        <img src="assets/images/case-studies/armant-result.png" alt="Armant WWTP Command Area">
+      </div>
+      <div class="case-study">
+        <h3>Alhajir WWTP (13,000 m³/day)</h3>
+        <p>Option 1: 5km | Option 2: 11.5km</p>
+        <img src="assets/images/case-studies/alhajir-result.png" alt="Alhajir WWTP Command Area">
+      </div>
+    </div>
+
+    <h2>Technologies Used</h2>
+    <ul>
+      <li>Python</li>
+      <li>PyQt for GUI</li>
+      <li>GDAL for geospatial processing</li>
+      <li>QGIS (logic reference)</li>
+      <li>D8 flow direction algorithm</li>
+    </ul>
+
+    <h2>Documentation</h2>
+    <ul>
+      <li><a href="assets/documents/presentations/Command Area Updated.pptx" download>Download Presentation (PPT)</a></li>
+      <li><a href="assets/documents/codes/command_area_tool.zip" download>Download Python Code (ZIP)</a></li>
+    </ul>
+
+    <h2>Visualizations</h2>
+    <div class="gallery">
+      <img src="assets/images/screenshots/model-interface.png" alt="Command Area Tool Interface">
+      <img src="assets/images/diagrams/flow-diagram.png" alt="Flow Diagram">
+      <img src="assets/images/screenshots/result-visualization.png" alt="Result Visualization">
+    </div>
+
+  </section>
+
+  <footer>
+    <p>© 2025 Kavindu Rukmal</p>
+  </footer>
+</body>
+</html>
