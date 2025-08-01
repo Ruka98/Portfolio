@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Groundwater Level Prediction Using Satellite Data</title>
+  <link rel="stylesheet" href="../../style.css" />
+  <style>
+    .image-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 20px 0;
+    }
+    .methodology-images {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .results-container {
+      display: flex;
+      justify-content: center;
+    }
+    .skills-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .skill-category {
+      flex: 1;
+      min-width: 250px;
+      max-width: 350px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Predictive Analysis of Groundwater Level Using Satellite Variables</h1>
+    <p><a href="../../index.html" style="color:#caf0f8;">← Back to Home</a></p>
+  </header>
+
+  <section>
+    <h2>Project Overview</h2>
+    <p>Developed a machine learning model to predict groundwater levels using satellite data in Sri Lanka's Malwathu Oya Basin, demonstrating the effectiveness of remote sensing for water resource management.</p>
+    
+    <div class="image-container">
+      <img src="images/basin.png" alt="Malwathu Oya Basin Map" style="width: 400px; height: auto;" />
+      <p class="caption">Figure 1: Study Area - Malwathu Oya Basin in Sri Lanka</p>
+    </div>
+
+    <h2>Key Contributions</h2>
+    <ul>
+      <li>Designed and implemented a comprehensive data collection system integrating satellite and ground-based measurements</li>
+      <li>Developed predictive models using multiple machine learning approaches</li>
+      <li>Demonstrated superior performance of ensemble methods over traditional regression</li>
+      <li>Identified key satellite-derived variables correlated with groundwater levels</li>
+    </ul>
+
+    <h2>Technical Skills Applied</h2>
+    <div class="skills-container">
+      <div class="skill-category">
+        <h3>Data Science</h3>
+        <ul>
+          <li>Machine Learning (Random Forest, Gradient Boosting)</li>
+          <li>Statistical Analysis (Correlation, Regression)</li>
+          <li>Feature Engineering</li>
+        </ul>
+      </div>
+      <div class="skill-category">
+        <h3>Remote Sensing</h3>
+        <ul>
+          <li>Landsat 8 Data Processing</li>
+          <li>NDVI and LST Extraction</li>
+          <li>Spatial Analysis</li>
+        </ul>
+      </div>
+      <div class="skill-category">
+        <h3>Tools & Technologies</h3>
+        <ul>
+          <li>Python (Pandas, Scikit-learn)</li>
+          <li>GIS Software</li>
+          <li>Google Earth Engine</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>Methodology</h2>
+    <div class="methodology-images">
+      <div class="image-container">
+        <img src="images/methodology1.png" alt="Methodology Part 1" style="width: 800px; height: auto;" />
+        <p class="caption">Figure 2a: Research Methodology - Data Collection & Processing</p>
+      </div>
+      <div class="image-container">
+        <img src="images/methodology2.png" alt="Methodology Part 2" style="width: 800px; height: auto;" />
+        <p class="caption">Figure 2b: Research Methodology - Modeling & Analysis</p>
+      </div>
+    </div>
+    
+    <ol class="methodology-steps">
+      <li>
+        <strong>Data Collection</strong>
+        <p>Integrated groundwater measurements, rainfall data, and Landsat 8 imagery from multiple sources</p>
+      </li>
+      <li>
+        <strong>Feature Extraction</strong>
+        <p>Processed satellite data to derive key variables: Land Surface Temperature (LST) and Normalized Difference Vegetation Index (NDVI)</p>
+      </li>
+      <li>
+        <strong>Correlation Analysis</strong>
+        <p>Identified relationships between satellite variables and groundwater levels across different wells</p>
+        <div class="image-container">
+          <img src="images/lst-correlation.png" alt="LST vs GWL Correlation" style="width: 800px; height: auto;" />
+          <p class="caption">Figure 3: Correlation between Land Surface Temperature and Groundwater Levels</p>
+        </div>
+        <div class="image-container">
+          <img src="images/ndvi-correlation.png" alt="NDVI vs GWL Correlation" style="width: 800px; height: auto;" />
+          <p class="caption">Figure 4: Correlation between NDVI and Groundwater Levels</p>
+        </div>
+      </li>
+      <li>
+        <strong>Model Development</strong>
+        <p>Built and compared three prediction models: Linear Regression, Random Forest, and Gradient Boosting</p>
+      </li>
+      <li>
+        <strong>Performance Evaluation</strong>
+        <p>Assessed models using R² and MSE metrics, with ensemble methods showing superior performance</p>
+        <div class="image-container">
+          <img src="models/model-comparison.png" alt="Model Performance Comparison" style="width: 1000px; height: auto;" />
+          <p class="caption">Figure 5: Comparison of Model Performance (Actual vs Predicted Values)</p>
+        </div>
+      </li>
+    </ol>
+
+    <h2>Key Achievements</h2>
+    <ul>
+      <li>Achieved 76% prediction accuracy using Gradient Boosting model</li>
+      <li>Demonstrated strong correlations between LST and groundwater levels (up to r=0.72)</li>
+      <li>Proved the effectiveness of satellite methods for groundwater monitoring</li>
+    </ul>
+
+    <p>Model Interface</p>
+    <div class="results-container">
+      <div class="result-item">
+        <img src="images/GWL.png" alt="Model Interface" style="width: 1000px; height: auto;" />
+      </div>
+    </div>
+
+    <footer>
+      <p>© 2025 Kavindu Rukmal | Department of Limnology and Water Technology, University of Ruhuna</p>
+    </footer>
+  </section>
+</body>
+</html>
