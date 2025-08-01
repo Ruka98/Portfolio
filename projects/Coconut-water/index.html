@@ -22,14 +22,13 @@
 
   <section>
     <h2>Overview</h2>
-    <p>This research project investigates the water requirements for coconut cultivation in Sri Lanka, addressing the current coconut shortage through scientific analysis of crop water demand versus available supply.</p>
+    <p>This research investigates water requirements for coconut cultivation in Sri Lanka, analyzing crop water demand versus available supply.</p>
     
     <p>The study focuses on:
     <ul>
-      <li>Calculating crop water requirements using FAO-56 Penman-Monteith method</li>
-      <li>Analyzing water deficit across different climatic zones</li>
-      <li>Comparing irrigation methods for coconut cultivation</li>
-      <li>Validating results with meteorological data</li>
+      <li>Calculating crop water requirements</li>
+      <li>Analyzing water deficit across climatic zones</li>
+      <li>Comparing irrigation methods</li>
     </ul>
     </p>
 
@@ -38,118 +37,55 @@
       <img src="assets/images/slides/slide3.png" alt="Coconut water requirements - Demand vs supply">
     </div>
     <ul>
-      <li><strong>Water Deficit Analysis:</strong> Significant water deficits were identified in key coconut-growing districts, particularly during dry seasons.</li>
-      <li><strong>Climatic Variations:</strong> ET₀ (Reference Evapotranspiration) showed considerable variation across Sri Lanka's climatic zones, ranging from 4-6 mm/day in wet zones to 5-7 mm/day in dry zones.</li>
-      <li><strong>Supply vs Requirement:</strong> Current water supply meets only 60-75% of coconut water requirements in major production areas during peak demand periods.</li>
+      <li>Significant water deficits identified in key coconut-growing districts</li>
+      <li>Considerable variation in water requirements across climatic zones</li>
+      <li>Current supply meets only 60-75% of requirements during peak periods</li>
     </ul>
 
     <h2>Methodology</h2>
-    <h3>Data Collection and Processing</h3>
-    <p>The study utilized Google Earth Engine for comprehensive data extraction and analysis (1990-2024):</p>
+    <h3>Data Collection</h3>
     <ul>
-      <li><strong>Precipitation Data:</strong> CHIRPS (Climate Hazards Group InfraRed Precipitation with Station data) daily precipitation dataset at 0.05° resolution</li>
-      <li><strong>Meteorological Data:</strong> ERA5 reanalysis data for temperature, humidity, wind speed, and solar radiation</li>
-      <li><strong>Validation:</strong> Ground station measurements from Sri Lanka Meteorological Department</li>
+      <li>Precipitation data from satellite sources</li>
+      <li>Meteorological data including temperature and humidity</li>
+      <li>Validation with ground station measurements</li>
     </ul>
 
-    <h3>FAO 56 Penman-Monteith Implementation</h3>
-    <p>The reference evapotranspiration (ET₀) was calculated using the standardized FAO 56 Penman-Monteith equation implemented in Google Earth Engine:</p>
-    <ul>
-      <li>Full implementation available at: <a href="https://code.earthengine.google.com/3f08cad952ac8b350d8338c8fc44ad9b?noload=1" target="_blank">Earth Engine Code Link</a></li>
-      <li>Equation incorporates:
-        <ul>
-          <li>Net radiation at crop surface (Rn)</li>
-          <li>Soil heat flux density (G)</li>
-          <li>Mean daily air temperature (T)</li>
-          <li>Wind speed at 2m height (u₂)</li>
-          <li>Actual vapor pressure (eₐ)</li>
-          <li>Saturation vapor pressure (eₛ)</li>
-          <li>Slope of vapor pressure curve (Δ)</li>
-          <li>Psychrometric constant (γ)</li>
-        </ul>
-      </li>
-      <li>Daily ET₀ calculations aggregated to monthly and seasonal values</li>
-      <li>Crop coefficients (Kc) applied for coconut-specific water requirements</li>
-    </ul>
-
+    <h3>Water Requirements Calculation</h3>
+    <p>Reference evapotranspiration calculated using standardized methods:</p>
     <div class="gallery">
       <img src="assets/images/slides/slide11.png" alt="FAO 56 Method">
       <img src="assets/images/slides/slide12.png" alt="Data inputs">
     </div>
 
-    <h3>Water Balance Analysis</h3>
+    <h3>Water Balance</h3>
     <ul>
-      <li>Water deficit calculated as difference between crop water requirement and effective precipitation</li>
-      <li>Spatial analysis conducted at district level for major coconut growing regions</li>
-      <li>Time series analysis for seasonal and interannual variability</li>
+      <li>Water deficit calculated as difference between requirement and precipitation</li>
+      <li>Analysis conducted at district level</li>
     </ul>
 
-    <h2>Data Analysis</h2>
-    <ul>
-      <li><strong>Data Validation:</strong> Strong correlation between ERA5 reanalysis data and ground station measurements (R² = 0.86-0.90 for temperature, 0.74 for precipitation).</li>
-      <li><strong>Seasonal Patterns:</strong> Highest water deficits occur from June to September in the Dry Zone, coinciding with critical coconut growth stages.</li>
-      <li><strong>District Variations:</strong> Puttalam, Kurunegala, and Gampaha districts show the most significant water deficits during peak demand periods.</li>
-    </ul>
-
+    <h2>Results</h2>
     <div class="gallery">
       <img src="assets/images/slides/slide16.png" alt="ET₀ Variation">
       <img src="assets/images/slides/slide18.png" alt="Water deficit by district">
     </div>
 
-    <h2>Irrigation Methods Comparison</h2>
-    <p>The study evaluated three irrigation methods for coconut cultivation:</p>
-    <ul>
-      <li><strong>Surface Irrigation:</strong> Traditional method with 50-60% efficiency, requiring 120-150 liters/tree/day</li>
-      <li><strong>Drip Irrigation:</strong> Most efficient (85-90%), reducing water use to 80-100 liters/tree/day</li>
-      <li><strong>Sprinkler Irrigation:</strong> 70-75% efficiency, using 100-120 liters/tree/day</li>
-    </ul>
+    <h2>Irrigation Methods</h2>
+    <p>Comparison of irrigation methods for coconut cultivation:</p>
     <div class="gallery">
       <img src="assets/images/slides/slide20.png" alt="Surface Irrigation">
       <img src="assets/images/slides/slide21.png" alt="Drip Irrigation">
       <img src="assets/images/slides/slide22.png" alt="Sprinkler Irrigation">
     </div>
 
-    <h2>Contributions</h2>
-    <ul>
-      <li><strong>Data Collection & Processing:</strong>
-        <ul>
-          <li>Downloaded and processed 30+ years of CHIRPS precipitation data for Sri Lanka</li>
-          <li>Extracted ERA5 meteorological data for key coconut growing regions</li>
-          <li>Cleaned and formatted ground station data from Sri Lanka Meteorological Department</li>
-        </ul>
-      </li>
-      <li><strong>Analysis & Implementation:</strong>
-        <ul>
-          <li>Implemented the FAO 56 Penman-Monteith equation in Google Earth Engine</li>
-          <li>Conducted spatial analysis of water deficits across districts</li>
-          <li>Performed time series analysis of seasonal water requirements</li>
-          <li>Validated satellite data with ground measurements</li>
-        </ul>
-      </li>
-      <li><strong>Visualization & Documentation:</strong>
-        <ul>
-          <li>Created all data visualizations and presentation slides</li>
-          <li>Prepared the technical documentation and methodology sections</li>
-          <li>Developed the Earth Engine code repository for public access</li>
-        </ul>
-      </li>
-    </ul>
-
     <h2>Recommendations</h2>
     <ul>
-      <li>Prioritize drip irrigation systems in water-scarce coconut-growing regions</li>
-      <li>Implement district-specific water management strategies based on deficit patterns</li>
-      <li>Develop early warning systems for water stress periods</li>
-      <li>Enhance rainwater harvesting during wet seasons to supplement dry season irrigation</li>
+      <li>Prioritize efficient irrigation systems</li>
+      <li>Implement district-specific water management</li>
+      <li>Enhance rainwater harvesting</li>
     </ul>
 
     <h2>Research Team</h2>
     <p>Supervised by Karthikeyan Matheswaran and Lal Mutuwatte</p>
-
-    <h2>Documentation</h2>
-    <ul>
-      <li>Technical report available upon request</li>
-    </ul>
   </section>
 
   <footer>
