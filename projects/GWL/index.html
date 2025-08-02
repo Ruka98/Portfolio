@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Groundwater Level Prediction Using Satellite Data</title>
@@ -36,9 +37,11 @@
 </head>
 <body>
   <header>
-    <h1>Predictive Analysis of Groundwater Level Using Satellite Variables</h1>
-    <p><a href="../../index.html" style="color:#caf0f8;">← Back to Home</a></p>
-  </header>
+  <button class="back-button" onclick="window.location.href='../../index.html'">
+    <i class="fas fa-arrow-left"></i>
+  </button>
+  <h1>Predictive Analysis of Groundwater Level Using Satellite Variables</h1>
+</header>
 
   <section>
     <h2>Project Overview</h2>
@@ -147,8 +150,24 @@
     </div>
 
     <footer>
-      <p>© 2025 Kavindu Rukmal | Department of Limnology and Water Technology, University of Ruhuna</p>
-    </footer>
+    <div class="container">
+      <div class="footer-links">
+        <a href="mailto:Kavindurukmal@gmail.com" class="footer-link">
+          <i class="fas fa-envelope"></i>
+          Email
+        </a>
+        <a href="https://github.com/Ruka98" target="_blank" class="footer-link">
+          <i class="fab fa-github"></i>
+          GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/kavindu-rukmal-113b61320/" target="_blank" class="footer-link">
+          <i class="fab fa-linkedin-in"></i>
+          LinkedIn
+        </a>
+      </div>
+      <p>© 2025 Kavindu Rukmal. All rights reserved.</p>
+    </div>
+  </footer>
   </section>
 </body>
 </html>
