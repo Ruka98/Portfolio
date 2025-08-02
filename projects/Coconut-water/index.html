@@ -1,17 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Coconut Water Requirements in Sri Lanka</title>
   <link rel="stylesheet" href="../../style.css" />
   <style>
-    .gallery {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin: 20px 0;
-    }
     .gallery img {
       max-width: 1000px;
       height: auto;
@@ -22,8 +17,10 @@
 </head>
 <body>
   <header>
-    <h1>Coconut Water Requirements in Sri Lanka</h1>
-    <p><a href="../../index.html" style="color:#caf0f8;">← Back to Home</a></p>
+  <button class="back-button" onclick="window.location.href='../../index.html'">
+    <i class="fas fa-arrow-left"></i>
+  </button>
+  <h1>Coconut Water Requirements in Sri Lanka</h1>
   </header>
 
   <section>
@@ -94,8 +91,25 @@
     <p>Supervised by Karthikeyan Matheswaran and Lal Mutuwatte</p>
   </section>
 
-  <footer>
-    <p>© 2025 International Water Management Institute (IWMI)</p>
+   <footer>
+    <div class="container">
+      <div class="footer-links">
+        <a href="mailto:Kavindurukmal@gmail.com" class="footer-link">
+          <i class="fas fa-envelope"></i>
+          Email
+        </a>
+        <a href="https://github.com/Ruka98" target="_blank" class="footer-link">
+          <i class="fab fa-github"></i>
+          GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/kavindu-rukmal-113b61320/" target="_blank" class="footer-link">
+          <i class="fab fa-linkedin-in"></i>
+          LinkedIn
+        </a>
+      </div>
+      <p>© 2025 Kavindu Rukmal. All rights reserved.</p>
+    </div>
   </footer>
+
 </body>
 </html>
